@@ -101,7 +101,7 @@ h1 span:last-child { color: var(--gold); font-style: italic; font-weight: 500; }
 
 /* Fact strip */
 .trustStrip { color: var(--ink); background: var(--gold); }
-.trustInner { width: min(1380px, calc(100% - 10vw)); min-height: 110px; margin: auto; display: grid; grid-template-columns: repeat(4, 1fr); }
+.trustInner { width: min(1380px, calc(100% - 10vw)); min-height: 110px; margin: auto; display: grid; grid-template-columns: repeat(3, 1fr); }
 .trustItem { display: flex; align-items: center; justify-content: center; gap: 15px; padding: 22px 18px; border-right: 1px solid rgba(17,38,68,.18); }
 .trustItem:first-child { border-left: 1px solid rgba(17,38,68,.18); }
 .trustItem b { font: italic 700 34px Georgia, serif; letter-spacing: -.05em; }
@@ -177,7 +177,7 @@ h1 span:last-child { color: var(--gold); font-style: italic; font-weight: 500; }
 .personalCaption:first-letter { color: var(--gold); }
 .personalCopy h2 { margin-bottom: 30px; }
 .personalCopy > p { margin: 0 0 20px; color: #4f6173; font-size: 15px; line-height: 1.8; }
-.personalCopy .personalLead { color: var(--ink); font: 500 19px/1.7 Georgia, serif; }
+.personalCopy .personalLead { color: var(--ink); font: 700 19px/1.7 Georgia, serif; }
 .personalCopy .button { margin-top: 18px; }
 .personalCopy > small { display: block; max-width: 520px; margin-top: 14px; color: #6d7d8b; font-size: 10px; line-height: 1.5; }
 .stepsGrid { margin-top: 96px; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(17,38,68,.18); border-bottom: 1px solid rgba(17,38,68,.18); }
@@ -303,9 +303,6 @@ footer { color: white; background: #06152f; }
   .bookStage { height: 590px; min-height: 590px; }
   .scrollCue { display: none; }
   .motionFragments { opacity: .12; }
-  .trustInner { grid-template-columns: repeat(2, 1fr); }
-  .trustItem:nth-child(3) { border-left: 1px solid rgba(17,38,68,.18); border-top: 1px solid rgba(17,38,68,.18); }
-  .trustItem:nth-child(4) { border-top: 1px solid rgba(17,38,68,.18); }
   .sectionIntro, .motionHeader { grid-template-columns: 1fr; gap: 28px; }
   .sectionIntro > p { max-width: 680px; }
   .bookGrid { grid-template-columns: 1fr; }

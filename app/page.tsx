@@ -107,13 +107,12 @@ const ui = {
       title2: 'остаются с нами',
       text: 'Таинственные города, мудрые коты и дети, которые разгадывают невозможные тайны — и учатся верить в себя.',
       primary: 'Выбрать приключение',
-      secondary: 'Сказка о Вашем ребенке или друге',
+      secondary: 'Ваша уникальная сказка о ребенке или друге',
       count: '3 мира уже открыты',
       scroll: 'Листайте, чтобы войти в историю',
     },
     trust: [
       ['03', 'авторские истории'],
-      ['02', 'языка изданий'],
       ['84', 'красочные страницы'],
       ['5–10', 'лет — возраст открытий'],
     ],
@@ -146,9 +145,9 @@ const ui = {
     },
     personal: {
       eyebrow: 'Персональная история',
-      title: 'Книга, где главный герой — ваш ребёнок',
-      lead: 'Представьте подарок, который невозможно перерасти. Ваш сын и его любимый пёс спасают город от пропавших цветов. Ваша дочь и её кот находят дверь в город незаданных вопросов. Или вся семья отправляется за картой будущего.',
-      promise: 'Мы создадим не шаблон с подставленным именем, а настоящую авторскую историю — с характером ребёнка, его шутками, мечтами и узнаваемыми деталями.',
+      title: 'Ваша собственная уникальная книга, где главные герои - Ваши дети или друзья',
+      lead: 'Представьте подарок, который невозможно перерасти. Ваш сын и его любимый пёс спасают город от нашествия злобных цветов. Ваша дочь и её кот находят дверь в город незаданных вопросов. Вся семья отправляется за картой будущего и находит волшебные сокровища.',
+      promise: 'Мы создадим настоящую авторскую историю — с реальным характером Вашего ребёнка, его шутками, мечтами и узнаваемыми деталями. Фотографии главных героев мы перенесём в мультяшный фантастический мир, где они встретятся с неожиданными инопланетными созданиями, применят магические заклинания или спасут целую планету. Мы вместе придумаем всё это, после чего создадим уникальную книжку, которая ещё многие десятилетия будет доброй, приятной памятью и, быть может, послужит подарком уже детям главных героев этой книжки.',
       steps: [
         ['01', 'Знакомимся', 'Вы рассказываете о ребёнке, его питомце, семье и важных мелочах.'],
         ['02', 'Придумываем мир', 'Согласовываем жанр, сюжетную завязку и визуальное настроение.'],
@@ -217,13 +216,12 @@ const ui = {
       title2: 'stay with us',
       text: 'Mysterious cities, wise cats, and children who solve impossible riddles—while finding the courage to believe in themselves.',
       primary: 'Choose an adventure',
-      secondary: 'Create a book about your child',
+      secondary: 'Your unique story about a child or a friend',
       count: '3 worlds are open',
       scroll: 'Scroll to enter the story',
     },
     trust: [
       ['03', 'original stories'],
-      ['02', 'publishing languages'],
       ['84', 'illustrated pages'],
       ['5–10', 'ages of discovery'],
     ],
@@ -256,9 +254,9 @@ const ui = {
     },
     personal: {
       eyebrow: 'A personal story',
-      title: 'A book where your child is the hero',
-      lead: 'Imagine a gift no one can outgrow. Your son and his beloved dog save a city that has lost all its colors. Your daughter and her cat discover a door into the City of Unasked Questions. Or the whole family sets out to find a map of the future.',
-      promise: 'This is not a template with a name dropped in. We create an original story shaped by your child’s personality, jokes, dreams, favorite places, and the tiny details only your family knows.',
+      title: 'Your own unique book, starring your children or friends',
+      lead: 'Imagine a gift no one can outgrow. Your son and his beloved dog save a city from an invasion of sinister flowers. Your daughter and her cat discover a door into the City of Unasked Questions. The whole family sets out in search of a map of the future—and finds magical treasure.',
+      promise: 'We will create a genuine original story shaped by your child’s real personality, jokes, dreams, and recognizable details. We will transform photographs of the main characters into a fantastical animated world, where they encounter unexpected alien creatures, cast magical spells, or save an entire planet. We will invent it all together, then turn it into a one-of-a-kind book that will remain a warm and joyful memory for decades—and may one day become a gift for the children of its own heroes.',
       steps: [
         ['01', 'We meet', 'You tell us about the child, their pet, family, interests, and the details that make them unique.'],
         ['02', 'We invent the world', 'Together we agree on the genre, the story premise, and the visual mood.'],
@@ -442,7 +440,7 @@ export default function Home() {
             <p>{t.hero.text}</p>
             <div className="heroActions">
               <a className="button buttonPrimary" href="#books">{t.hero.primary}<i>→</i></a>
-              <a className="button buttonGhost" href="#personal">{t.hero.secondary}</a>
+              <a className="button buttonGhost" href="#personal">{t.hero.secondary}<i>→</i></a>
             </div>
             <div className="worldCount"><b>03</b><span>{t.hero.count}</span></div>
           </div>

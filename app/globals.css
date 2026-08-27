@@ -203,7 +203,7 @@ h1 span:last-child { color: var(--gold); font-style: italic; font-weight: 500; }
 .authorCopy blockquote { margin: 34px 0 27px; padding: 28px 30px 28px 66px; position: relative; border-left: 3px solid var(--gold); background: #f1e6d4; font: italic 500 21px/1.55 Georgia, serif; }
 .authorCopy blockquote::before { content: '✦'; position: absolute; left: 25px; top: 22px; color: var(--gold-dark); font: 700 24px Georgia, serif; }
 .authorCopy blockquote > span { display: block; }
-.authorSignature { width: min(75px, 18%); margin: 18px 6px 0 auto; opacity: .86; }
+.authorSignature { width: min(150px, 36%); margin: 18px 6px 0 auto; opacity: .86; }
 .authorBookLinks { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
 .textLink { display: inline-flex; align-items: center; gap: 12px; padding: 0 0 7px; border: 0; border-bottom: 1px solid currentColor; background: none; color: var(--ink); font-size: 12px; font-weight: 850; cursor: pointer; }
 .textLink i { color: var(--gold-dark); font-style: normal; }

@@ -75,6 +75,7 @@ h1 span { display: block; }
 h1 span:last-child { color: var(--gold); font-style: italic; font-weight: 500; }
 .heroCopy > p { max-width: 610px; color: #c9dcf1; font-size: clamp(15px, 1.2vw, 19px); line-height: 1.65; }
 .heroActions { margin-top: 35px; display: flex; align-items: center; gap: 13px; flex-wrap: wrap; }
+.heroActions .button { width: 270px; height: 66px; padding: 8px 20px; line-height: 1.25; text-align: center; }
 .button { min-height: 52px; padding: 0 23px; border: 0; border-radius: 13px; display: inline-flex; align-items: center; justify-content: center; gap: 24px; font-size: 13px; font-weight: 800; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
 .button:hover { transform: translateY(-3px); }
 .button i { font-size: 19px; font-style: normal; }
@@ -336,7 +337,7 @@ footer { color: white; background: #06152f; }
   h1 { font-size: 47px; }
   .heroCopy > p { font-size: 15px; }
   .heroActions { flex-direction: column; width: 100%; }
-  .heroActions .button { width: 100%; }
+  .heroActions .button { width: 100%; height: 66px; }
   .bookStage { height: 465px; min-height: 465px; width: 100vw; margin-left: -20px; }
   .cover { width: 205px; }
   .coverLeft { transform: translate(-93%, -45%) rotate(-12deg) scale(.68); }

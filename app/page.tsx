@@ -166,7 +166,7 @@ const ui = {
       p1: 'Игорь ГЕРЦОГ — автор сказок и приключенческих повестей для детей, в которых мягкий юмор соседствует с загадками, а яркие приключения — с серьёзными вопросами.',
       p2: 'В его историях привычные вещи открываются с неожиданной стороны, а герои учатся дружить, выбирать, ошибаться и оставаться собой. Каждая книга завершается на светлой ноте, но оставляет место для собственной мысли.',
       p3: 'Особое внимание автор уделяет визуальному миру: иллюстрации не просто сопровождают текст, а продолжают рассказ. В них прячутся подсказки, знаки и вторые сюжеты. И, конечно, важную роль играют коты — наблюдательные, остроумные и иногда подозрительно мудрые.',
-      quote: '«Хорошая детская книга не даёт готовый ответ. Она даёт ребёнку смелость задать свой вопрос».',
+      quote: '«Хорошая детская книга не обещает готовых ответов, но даёт ребёнку смелость задать вопрос и сделать первый шаг».',
       role: 'Писатель · Создатель визуальных миров',
       link: 'Все книги на ЛитРес',
     },
@@ -276,7 +276,7 @@ const ui = {
       p1: 'Igor Herzog writes illustrated fairy tales and adventure stories for children, blending gentle humor and tightly woven mysteries with ideas that invite a deeper conversation.',
       p2: 'In his stories, familiar things reveal an unexpected side. Children learn to be brave, make choices, get things wrong, and remain themselves. Each journey ends on a bright note, but leaves space for a thought of one’s own.',
       p3: 'The visual world matters just as much as the words. Illustrations continue the story with clues, symbols, and second narratives hidden inside them. And, naturally, there are cats—observant, witty, and occasionally far too wise.',
-      quote: '“A good children’s book does not hand over a ready-made answer. It gives a child the courage to ask their own question.”',
+      quote: '“A good children’s book does not promise ready-made answers, but gives a child the courage to ask a question and take the first step.”',
       role: 'Writer · Creator of visual worlds',
       link: 'All books on LitRes',
     },
@@ -554,7 +554,10 @@ export default function Home() {
             <span className="sectionEyebrow">{t.author.eyebrow}</span>
             <h2>{t.author.title}</h2>
             <div className="authorText"><p>{t.author.p1}</p><p>{t.author.p2}</p><p>{t.author.p3}</p></div>
-            <blockquote>{t.author.quote}</blockquote>
+            <blockquote>
+              <span>{t.author.quote}</span>
+              <img className="authorSignature" src={asset('/author/igor-signature.webp')} alt={lang === 'ru' ? 'Подпись Игоря Герцога' : 'Igor Herzog’s signature'} />
+            </blockquote>
             <a className="textLink" href="https://www.litres.ru/author/igor-gercog/" target="_blank" rel="noreferrer">{t.author.link}<i>↗</i></a>
           </div>
         </div>

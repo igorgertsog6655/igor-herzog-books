@@ -61,7 +61,7 @@ h2 { margin: 20px 0 0; font: 700 clamp(38px, 4.4vw, 68px)/1.01 Georgia, "Times N
 .siteHeader nav a:first-child::after { content: ''; position: absolute; left: 0; right: 46%; bottom: -13px; height: 2px; background: var(--gold); }
 .headerActions { display: flex; align-items: center; gap: 10px; }
 .langSwitch { display: flex; gap: 4px; padding: 4px; border: 1px solid rgba(255,255,255,.22); border-radius: 999px; }
-.langSwitch button { width: 39px; height: 29px; border: 0; border-radius: 999px; background: transparent; color: #a9c2df; font-size: 11px; cursor: pointer; }
+.langSwitch button { width: 44px; height: 29px; border: 0; border-radius: 999px; background: transparent; color: #a9c2df; font-size: 11px; cursor: pointer; }
 .langSwitch button.active { color: #10264b; background: var(--gold); font-weight: 800; }
 .menuButton { display: none; width: 42px; height: 42px; padding: 0; border: 1px solid rgba(255,255,255,.25); border-radius: 50%; background: rgba(255,255,255,.06); cursor: pointer; }
 .menuButton span { display: block; width: 17px; height: 1px; margin: 5px auto; background: white; }
@@ -180,7 +180,7 @@ h1 span:last-child { color: var(--gold); font-style: italic; font-weight: 500; }
 .personalCopy .personalLead { color: var(--ink); font: 700 19px/1.7 Georgia, serif; }
 .personalCopy .button { margin-top: 18px; }
 .personalCopy > small { display: block; max-width: 520px; margin-top: 14px; color: #6d7d8b; font-size: 10px; line-height: 1.5; }
-.stepsGrid { margin-top: 96px; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(17,38,68,.18); border-bottom: 1px solid rgba(17,38,68,.18); }
+.stepsGrid { margin-top: 96px; display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid rgba(17,38,68,.18); border-bottom: 1px solid rgba(17,38,68,.18); }
 .stepsGrid article { min-height: 230px; padding: 32px 28px; border-left: 1px solid rgba(17,38,68,.18); }
 .stepsGrid article:last-child { border-right: 1px solid rgba(17,38,68,.18); }
 .stepsGrid article > span { color: var(--gold-dark); font: italic 700 28px Georgia, serif; }
@@ -314,8 +314,8 @@ footer { color: white; background: #06152f; }
   .personalGrid { grid-template-columns: 1fr; }
   .personalVisual { width: min(650px, 100%); margin: 0 auto; }
   .stepsGrid { grid-template-columns: repeat(2, 1fr); }
-  .stepsGrid article:nth-child(3) { border-top: 1px solid rgba(17,38,68,.18); }
-  .stepsGrid article:nth-child(4) { border-top: 1px solid rgba(17,38,68,.18); border-right: 1px solid rgba(17,38,68,.18); }
+  .stepsGrid article:nth-child(n+3) { border-top: 1px solid rgba(17,38,68,.18); }
+  .stepsGrid article:nth-child(even) { border-right: 1px solid rgba(17,38,68,.18); }
   .authorGrid { grid-template-columns: 1fr; }
   .authorPortrait { min-height: 650px; width: min(520px, 100%); margin: 0 auto; }
   .contactGrid { grid-template-columns: 1fr; }
@@ -372,9 +372,7 @@ footer { color: white; background: #06152f; }
   .personalCopy .personalLead { font-size: 17px; }
   .personalCopy .button { width: 100%; }
   .stepsGrid { margin-top: 65px; grid-template-columns: 1fr; border-bottom: 0; }
-  .stepsGrid article { min-height: 0; padding: 28px 20px; border-right: 1px solid rgba(17,38,68,.18); border-bottom: 1px solid rgba(17,38,68,.18); }
-  .stepsGrid article:nth-child(2) { border-top: 0; }
-  .stepsGrid article:nth-child(3), .stepsGrid article:nth-child(4) { border-top: 0; }
+  .stepsGrid article { min-height: 0; padding: 28px 20px; border-top: 0; border-right: 1px solid rgba(17,38,68,.18); border-bottom: 1px solid rgba(17,38,68,.18); }
   .authorPortrait { min-height: 560px; border-radius: 180px 180px 22px 22px; }
   .authorText { columns: 1; }
   .authorCopy blockquote { padding: 24px 22px 24px 51px; font-size: 18px; }

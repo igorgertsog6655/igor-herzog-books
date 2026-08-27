@@ -408,6 +408,8 @@ export default function Home() {
   return (
     <main>
       <section className="hero" id="top">
+        <img className="heroWorld" src={asset('/backgrounds/hero-fantasy-cosmos.webp')} alt="" />
+        <div className="heroShade" />
         <div className="aurora auroraOne" />
         <div className="aurora auroraTwo" />
         <div className="stars" />
@@ -419,7 +421,7 @@ export default function Home() {
 
         <header className="siteHeader">
           <a className="brand" href="#top" aria-label={lang === 'ru' ? 'Игорь ГЕРЦОГ — главная' : 'Igor Herzog — home'}>
-            <span className="brandMark"><img src={asset('/author/igor-herzog.webp')} alt="" /></span>
+            <span className="brandMark"><img src={asset('/author/fonarik.webp')} alt="" /></span>
             <span><b>{lang === 'ru' ? 'Игорь ГЕРЦОГ' : 'IGOR HERZOG'}</b><small>{lang === 'ru' ? 'ФАНТАСТИЧЕСКИЕ МИРЫ' : 'STORY WORLDS'}</small></span>
           </a>
           <nav className={menuOpen ? 'open' : ''} aria-label="Main navigation">
@@ -592,7 +594,7 @@ export default function Home() {
 
       <footer>
         <div className="sectionWrap footerTop">
-          <a className="brand" href="#top"><span className="brandMark"><img src={asset('/author/igor-herzog.webp')} alt="" /></span><span><b>{lang === 'ru' ? 'Игорь ГЕРЦОГ' : 'IGOR HERZOG'}</b><small>{lang === 'ru' ? 'ФАНТАСТИЧЕСКИЕ МИРЫ' : 'STORY WORLDS'}</small></span></a>
+          <a className="brand" href="#top"><span className="brandMark"><img src={asset('/author/fonarik.webp')} alt="" /></span><span><b>{lang === 'ru' ? 'Игорь ГЕРЦОГ' : 'IGOR HERZOG'}</b><small>{lang === 'ru' ? 'ФАНТАСТИЧЕСКИЕ МИРЫ' : 'STORY WORLDS'}</small></span></a>
           <p>{t.footer.line}</p>
           <a className="backTop" href="#top">↑</a>
         </div>

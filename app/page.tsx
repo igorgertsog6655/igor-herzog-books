@@ -102,12 +102,12 @@ const ui = {
       ['Связаться', '#contact'],
     ],
     hero: {
-      eyebrow: 'Авторские сказки Игоря Герцога',
+      eyebrow: 'Авторские сказки Игоря ГЕРЦОГА',
       title1: 'Истории, которые',
       title2: 'остаются с нами',
       text: 'Таинственные города, мудрые коты и дети, которые разгадывают невозможные тайны — и учатся верить в себя.',
       primary: 'Выбрать приключение',
-      secondary: 'Создать книгу о ребёнке',
+      secondary: 'Сказка по заказанному сценарию',
       count: '3 мира уже открыты',
       scroll: 'Листайте, чтобы войти в историю',
     },
@@ -162,8 +162,8 @@ const ui = {
     },
     author: {
       eyebrow: 'Об авторе',
-      title: 'Игорь Герцог создаёт миры, где волшебство начинается с вопроса',
-      p1: 'Игорь Герцог — автор сказок и приключенческих повестей для детей, в которых мягкий юмор соседствует с загадками, а яркие приключения — с серьёзными вопросами.',
+      title: 'Игорь ГЕРЦОГ создаёт миры, где волшебство начинается с вопроса',
+      p1: 'Игорь ГЕРЦОГ — автор сказок и приключенческих повестей для детей, в которых мягкий юмор соседствует с загадками, а яркие приключения — с серьёзными вопросами.',
       p2: 'В его историях привычные вещи открываются с неожиданной стороны, а герои учатся дружить, выбирать, ошибаться и оставаться собой. Каждая книга завершается на светлой ноте, но оставляет место для собственной мысли.',
       p3: 'Особое внимание автор уделяет визуальному миру: иллюстрации не просто сопровождают текст, а продолжают рассказ. В них прячутся подсказки, знаки и вторые сюжеты. И, конечно, важную роль играют коты — наблюдательные, остроумные и иногда подозрительно мудрые.',
       quote: '«Хорошая детская книга не даёт готовый ответ. Она даёт ребёнку смелость задать свой вопрос».',
@@ -380,7 +380,7 @@ export default function Home() {
 
     setFormState('sending');
     const data = new FormData(form);
-    data.set('_subject', lang === 'ru' ? 'Новое письмо с сайта Игоря Герцога' : 'New message from Igor Herzog website');
+    data.set('_subject', lang === 'ru' ? 'Новое письмо с сайта Игоря ГЕРЦОГА' : 'New message from Igor Herzog website');
     data.set('_template', 'table');
     data.set('_captcha', 'false');
     data.set('language', lang === 'ru' ? 'Русский' : 'English');
@@ -416,7 +416,7 @@ export default function Home() {
         <header className="siteHeader">
           <a className="brand" href="#top" aria-label="Igor Herzog — home">
             <span className="brandMark">H</span>
-            <span><b>IGOR HERZOG</b><small>STORY WORLDS</small></span>
+            <span><b>{lang === 'ru' ? 'Игорь ГЕРЦОГ' : 'IGOR HERZOG'}</b><small>STORY WORLDS</small></span>
           </a>
           <nav className={menuOpen ? 'open' : ''} aria-label="Main navigation">
             {t.nav.map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)}>{label}</a>)}
@@ -542,9 +542,8 @@ export default function Home() {
       <section className="author sectionLight" id="author">
         <div className="sectionWrap authorGrid">
           <div className="authorPortrait">
-            <div className="authorMonogram">H</div>
-            <img src={asset('/scenes/moon-chase.webp')} alt="" />
-            <div className="authorTag"><b>IGOR HERZOG</b><span>{t.author.role}</span></div>
+            <img src={asset('/author/igor-herzog.webp')} alt={lang === 'ru' ? 'Игорь ГЕРЦОГ' : 'Igor Herzog'} />
+            <div className="authorTag"><b>{lang === 'ru' ? 'Игорь ГЕРЦОГ' : 'IGOR HERZOG'}</b><span>{t.author.role}</span></div>
           </div>
           <div className="authorCopy">
             <span className="sectionEyebrow">{t.author.eyebrow}</span>
@@ -589,11 +588,11 @@ export default function Home() {
 
       <footer>
         <div className="sectionWrap footerTop">
-          <a className="brand" href="#top"><span className="brandMark">H</span><span><b>IGOR HERZOG</b><small>STORY WORLDS</small></span></a>
+          <a className="brand" href="#top"><span className="brandMark">H</span><span><b>{lang === 'ru' ? 'Игорь ГЕРЦОГ' : 'IGOR HERZOG'}</b><small>STORY WORLDS</small></span></a>
           <p>{t.footer.line}</p>
           <a className="backTop" href="#top">↑</a>
         </div>
-        <div className="sectionWrap footerBottom"><span>© 2026 Igor Herzog. {t.footer.rights}</span><a href="#contact" id="privacy">{t.footer.privacy}</a></div>
+        <div className="sectionWrap footerBottom"><span>© 2026 {lang === 'ru' ? 'Игорь ГЕРЦОГ' : 'Igor Herzog'}. {t.footer.rights}</span><a href="#contact" id="privacy">{t.footer.privacy}</a></div>
       </footer>
 
       {selectedBook && (

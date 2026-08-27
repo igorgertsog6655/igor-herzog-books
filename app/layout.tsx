@@ -5,10 +5,10 @@ const siteUrl = 'https://igorgertsog6655.github.io/igor-herzog-books';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: 'Игорь Герцог — истории, которые остаются с нами',
+  title: 'Игорь ГЕРЦОГ — истории, которые остаются с нами',
   description: 'Красочные авторские сказки и книги по персональному заказу.',
   keywords: ['детские книги', 'авторские сказки', 'персональная книга', 'Igor Herzog', "children's books"],
-  authors: [{ name: 'Igor Herzog' }],
+  authors: [{ name: 'Игорь ГЕРЦОГ' }],
   icons: { icon: '/favicon.png' },
   alternates: { canonical: siteUrl },
   openGraph: {
@@ -16,10 +16,10 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: 'Igor Herzog Story Worlds',
     title: 'Истории, которые остаются с нами',
-    description: 'Авторские сказки Игоря Герцога и книги по персональному заказу.',
+    description: 'Авторские сказки Игоря ГЕРЦОГА и книги по персональному заказу.',
     locale: 'ru_RU',
     alternateLocale: ['en_US'],
-    images: [{ url: `${siteUrl}/og.png`, width: 1200, height: 630, alt: 'Истории Игоря Герцога' }],
+    images: [{ url: `${siteUrl}/og.png`, width: 1200, height: 630, alt: 'Истории Игоря ГЕРЦОГА' }],
   },
   twitter: {
     card: 'summary_large_image',

@@ -51,6 +51,7 @@ h2 { margin: 20px 0 0; font: 700 clamp(38px, 4.4vw, 68px)/1.01 Georgia, "Times N
 .siteHeader { height: 92px; width: min(1440px, 100%); margin: auto; padding: 0 5vw; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 20; border-bottom: 1px solid rgba(255,255,255,.12); }
 .brand { display: inline-flex; align-items: center; gap: 12px; flex-shrink: 0; }
 .brandMark { width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.44); border-radius: 50%; font: italic 700 24px Georgia, serif; color: var(--gold); box-shadow: inset 0 0 0 4px rgba(255,255,255,.05); }
+.brandMark img { width: 100%; height: 100%; border: 3px solid rgba(8,31,70,.9); border-radius: inherit; object-fit: cover; object-position: 50% 30%; }
 .brand b { display: block; font-size: 14px; letter-spacing: .13em; }
 .brand small { display: block; margin-top: 3px; color: #8fcfff; letter-spacing: .22em; font-size: 8px; }
 .siteHeader nav { display: flex; gap: clamp(18px, 2.7vw, 48px); align-items: center; font-size: 12px; color: #dcecff; }
@@ -210,7 +211,7 @@ h1 span:last-child { color: var(--gold); font-style: italic; font-weight: 500; }
 .contactCopy > p { max-width: 560px; margin: 28px 0; color: #b7cce2; font-size: 15px; line-height: 1.75; }
 .emailCard { margin-top: 44px; padding: 24px 0; display: flex; flex-direction: column; gap: 8px; border-top: 1px solid rgba(255,255,255,.15); border-bottom: 1px solid rgba(255,255,255,.15); }
 .emailCard > span { color: #7ea8cf; font-size: 8px; font-weight: 850; letter-spacing: .2em; }
-.emailCard a { color: var(--gold); font: 700 clamp(19px, 2vw, 29px) Georgia, serif; }
+.emailCard strong { color: var(--gold); font: 700 clamp(19px, 2vw, 29px) Georgia, serif; }
 .emailCard small { color: #91abc5; font-size: 10px; }
 .contactForm { padding: 38px; border: 1px solid rgba(255,255,255,.16); border-radius: 24px; background: rgba(255,255,255,.07); backdrop-filter: blur(18px); box-shadow: 0 30px 80px rgba(0,0,0,.22); }
 .fieldRow { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }

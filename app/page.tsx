@@ -174,6 +174,8 @@ const ui = {
       eyebrow: 'Начнём с одной идеи',
       title: 'Расскажите, какой мир вы хотите подарить',
       text: 'Напишите автору о персональной книге, правах на экранизацию, покупке PDF или просто поделитесь впечатлениями.',
+      privateLabel: 'Связь с автором',
+      privateCta: 'Напишите через форму',
       response: 'Обычно отвечаем в течение 1–2 рабочих дней.',
       name: 'Ваше имя',
       email: 'Email для ответа',
@@ -193,7 +195,7 @@ const ui = {
       submit: 'Отправить письмо',
       sending: 'Отправляем…',
       success: 'Спасибо! Письмо отправлено. Мы ответим на указанный email.',
-      error: 'Не удалось отправить форму. Напишите нам напряму:',
+      error: 'Не удалось отправить форму. Попробуйте ещё раз немного позже.',
       tooLarge: 'Общий размер вложений не должен превышать 10 МБ.',
     },
     footer: {
@@ -282,6 +284,8 @@ const ui = {
       eyebrow: 'It starts with one idea',
       title: 'Tell us what kind of world you want to give',
       text: 'Write about a personal book, screen rights, a direct PDF purchase, or simply share what the stories made you feel.',
+      privateLabel: 'Contact the author',
+      privateCta: 'Write using the form',
       response: 'We usually reply within 1–2 business days.',
       name: 'Your name',
       email: 'Email for our reply',
@@ -301,7 +305,7 @@ const ui = {
       submit: 'Send the message',
       sending: 'Sending…',
       success: 'Thank you! Your message has been sent. We will reply to the email you provided.',
-      error: 'The form could not be sent. Please email us directly:',
+      error: 'The form could not be sent. Please try again a little later.',
       tooLarge: 'The combined attachment size must not exceed 10 MB.',
     },
     footer: {
@@ -386,7 +390,7 @@ export default function Home() {
     data.set('language', lang === 'ru' ? 'Русский' : 'English');
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/nsk.photodivers@gmail.com', {
+      const response = await fetch('https://formsubmit.co/ajax/64c15179829d5c6b816fba3384bacb44', {
         method: 'POST',
         headers: { Accept: 'application/json' },
         body: data,
@@ -414,9 +418,9 @@ export default function Home() {
         </div>
 
         <header className="siteHeader">
-          <a className="brand" href="#top" aria-label="Igor Herzog — home">
-            <span className="brandMark">H</span>
-            <span><b>{lang === 'ru' ? 'Игорь ГЕРЦОГ' : 'IGOR HERZOG'}</b><small>STORY WORLDS</small></span>
+          <a className="brand" href="#top" aria-label={lang === 'ru' ? 'Игорь ГЕРЦОГ — главная' : 'Igor Herzog — home'}>
+            <span className="brandMark"><img src={asset('/author/igor-herzog.webp')} alt="" /></span>
+            <span><b>{lang === 'ru' ? 'Игорь ГЕРЦОГ' : 'IGOR HERZOG'}</b><small>{lang === 'ru' ? 'ФАНТАСТИЧЕСКИЕ МИРЫ' : 'STORY WORLDS'}</small></span>
           </a>
           <nav className={menuOpen ? 'open' : ''} aria-label="Main navigation">
             {t.nav.map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)}>{label}</a>)}
@@ -562,7 +566,7 @@ export default function Home() {
             <span className="sectionEyebrow sectionEyebrowLight">{t.contact.eyebrow}</span>
             <h2>{t.contact.title}</h2>
             <p>{t.contact.text}</p>
-            <div className="emailCard"><span>EMAIL</span><a href="mailto:nsk.photodivers@gmail.com">nsk.photodivers@gmail.com</a><small>{t.contact.response}</small></div>
+            <div className="emailCard"><span>{t.contact.privateLabel}</span><strong>{t.contact.privateCta}</strong><small>{t.contact.response}</small></div>
           </div>
           <form className="contactForm" onSubmit={handleSubmit} encType="multipart/form-data">
             <input className="honey" type="text" name="_honey" tabIndex={-1} autoComplete="off" aria-hidden="true" />
@@ -581,14 +585,14 @@ export default function Home() {
             <button className="button buttonPrimary submitButton" type="submit" disabled={formState === 'sending'}>{formState === 'sending' ? t.contact.sending : t.contact.submit}<i>→</i></button>
             {formState === 'success' && <p className="formMessage success" role="status">{t.contact.success}</p>}
             {formState === 'too-large' && <p className="formMessage error" role="alert">{t.contact.tooLarge}</p>}
-            {formState === 'error' && <p className="formMessage error" role="alert">{t.contact.error} <a href="mailto:nsk.photodivers@gmail.com">nsk.photodivers@gmail.com</a></p>}
+            {formState === 'error' && <p className="formMessage error" role="alert">{t.contact.error}</p>}
           </form>
         </div>
       </section>
 
       <footer>
         <div className="sectionWrap footerTop">
-          <a className="brand" href="#top"><span className="brandMark">H</span><span><b>{lang === 'ru' ? 'Игорь ГЕРЦОГ' : 'IGOR HERZOG'}</b><small>STORY WORLDS</small></span></a>
+          <a className="brand" href="#top"><span className="brandMark"><img src={asset('/author/igor-herzog.webp')} alt="" /></span><span><b>{lang === 'ru' ? 'Игорь ГЕРЦОГ' : 'IGOR HERZOG'}</b><small>{lang === 'ru' ? 'ФАНТАСТИЧЕСКИЕ МИРЫ' : 'STORY WORLDS'}</small></span></a>
           <p>{t.footer.line}</p>
           <a className="backTop" href="#top">↑</a>
         </div>

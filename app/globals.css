@@ -208,6 +208,11 @@ h1 span:last-child { color: var(--gold); font-style: italic; font-weight: 500; }
 .textLink { display: inline-flex; align-items: center; gap: 12px; padding: 0 0 7px; border: 0; border-bottom: 1px solid currentColor; background: none; color: var(--ink); font-size: 12px; font-weight: 850; cursor: pointer; }
 .textLink i { color: var(--gold-dark); font-style: normal; }
 
+/* Full author portrait */
+.fullPortraitPage { min-height: 100vh; padding: 74px 24px 48px; display: flex; flex-direction: column; align-items: center; gap: 28px; background: #071a3f; }
+.fullPortraitPage > img { width: min(1123px, 100%); height: auto; border-radius: 18px; box-shadow: 0 30px 90px rgba(0,0,0,.42); }
+.portraitBack { position: fixed; z-index: 2; left: 24px; top: 20px; padding: 11px 16px; border: 1px solid rgba(255,255,255,.25); border-radius: 999px; background: rgba(7,26,63,.82); color: white; font-size: 12px; font-weight: 750; backdrop-filter: blur(10px); }
+
 /* Contact */
 .contact { position: relative; padding: 135px 0 120px; overflow: hidden; }
 .contact::before { content: ''; position: absolute; inset: 0; opacity: .18; background-image: radial-gradient(circle, white 0 1px, transparent 1.7px); background-size: 91px 91px; }

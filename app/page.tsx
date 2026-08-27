@@ -548,7 +548,7 @@ export default function Home() {
 
       <section className="author sectionLight" id="author">
         <div className="sectionWrap authorGrid">
-          <a className="authorPortrait" href={asset('/author/igor-herzog-6-oil-full.png')} target="_blank" rel="noreferrer" aria-label={lang === 'ru' ? 'Открыть полный портрет автора' : 'Open the full author portrait'}>
+          <a className="authorPortrait" href={asset('/portrait/')} target="_blank" rel="noreferrer" aria-label={lang === 'ru' ? 'Открыть полный портрет автора' : 'Open the full author portrait'}>
             <img src={asset('/author/igor-herzog-6-oil.webp')} alt={lang === 'ru' ? 'Игорь ГЕРЦОГ' : 'Igor Herzog'} />
             <div className="authorTag"><b>{lang === 'ru' ? 'Игорь ГЕРЦОГ' : 'IGOR HERZOG'}</b><span>{t.author.role}</span></div>
           </a>

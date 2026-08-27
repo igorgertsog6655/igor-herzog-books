@@ -43,7 +43,6 @@ h2 { margin: 20px 0 0; font: 700 clamp(38px, 4.4vw, 68px)/1.01 Georgia, "Times N
 .aurora { position: absolute; z-index: -3; border-radius: 999px; filter: blur(22px); opacity: .55; animation: drift 9s ease-in-out infinite alternate; }
 .auroraOne { width: 42vw; height: 42vw; right: -9vw; top: -12vw; background: radial-gradient(circle, rgba(74,215,255,.72), transparent 66%); }
 .auroraTwo { width: 34vw; height: 34vw; left: -12vw; bottom: -16vw; background: radial-gradient(circle, rgba(166,78,255,.4), transparent 68%); animation-delay: -3s; }
-.stars { position: absolute; inset: 0; z-index: -2; opacity: .82; background-image: radial-gradient(circle, white 0 1px, transparent 1.7px), radial-gradient(circle, #ffd66b 0 1.4px, transparent 2px); background-position: 0 0, 41px 29px; background-size: 83px 83px, 127px 127px; mask-image: radial-gradient(ellipse at 70% 45%, black, transparent 68%); animation: twinkle 5s ease-in-out infinite alternate; }
 .motionFragments { position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: .2; mix-blend-mode: soft-light; mask-image: radial-gradient(ellipse at 70% 47%, #000 0, rgba(0,0,0,.78) 30%, transparent 72%); }
 .fragment { position: absolute; width: 44vw; min-width: 560px; height: 54vh; object-fit: cover; border-radius: 50%; filter: saturate(1.25) contrast(1.06); }
 .fragmentOne { right: 4vw; top: 12vh; animation: fragmentFade 18s ease-in-out infinite; }

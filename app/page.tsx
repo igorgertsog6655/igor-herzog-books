@@ -412,7 +412,6 @@ export default function Home() {
         <div className="heroShade" />
         <div className="aurora auroraOne" />
         <div className="aurora auroraTwo" />
-        <div className="stars" />
         <div className="motionFragments" aria-hidden="true">
           <img className="fragment fragmentOne" src={asset('/scenes/moon-chase.webp')} alt="" />
           <img className="fragment fragmentTwo" src={asset('/scenes/suitcase-stairs.webp')} alt="" />

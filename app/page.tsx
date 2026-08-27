@@ -547,7 +547,7 @@ export default function Home() {
       <section className="author sectionLight" id="author">
         <div className="sectionWrap authorGrid">
           <div className="authorPortrait">
-            <img src={asset('/author/igor-herzog-7.webp')} alt={lang === 'ru' ? 'Игорь ГЕРЦОГ' : 'Igor Herzog'} />
+            <img src={asset('/author/igor-herzog-6-oil.webp')} alt={lang === 'ru' ? 'Игорь ГЕРЦОГ' : 'Igor Herzog'} />
             <div className="authorTag"><b>{lang === 'ru' ? 'Игорь ГЕРЦОГ' : 'IGOR HERZOG'}</b><span>{t.author.role}</span></div>
           </div>
           <div className="authorCopy">

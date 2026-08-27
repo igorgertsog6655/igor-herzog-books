@@ -192,7 +192,7 @@ h1 span:last-child { color: var(--gold); font-style: italic; font-weight: 500; }
 .authorGrid { display: grid; grid-template-columns: .75fr 1.25fr; gap: 9vw; align-items: center; }
 .authorPortrait { min-height: 720px; position: relative; overflow: hidden; border-radius: 220px 220px 24px 24px; background: var(--blue); box-shadow: 0 38px 80px rgba(17,38,68,.18); }
 .authorPortrait::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(6,22,52,.94), transparent 58%); }
-.authorPortrait img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; object-position: 8% center; opacity: .96; filter: saturate(.92) contrast(1.04); }
+.authorPortrait img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; object-position: center; opacity: .96; filter: saturate(.92) contrast(1.04); }
 .authorTag { position: absolute; z-index: 3; left: 34px; right: 34px; bottom: 34px; color: white; }
 .authorTag b { display: block; color: var(--gold); font: 700 32px Georgia, serif; letter-spacing: .03em; }
 .authorTag span { display: block; margin-top: 8px; color: #c6daf0; font-size: 9px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }

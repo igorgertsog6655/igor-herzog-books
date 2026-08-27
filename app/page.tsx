@@ -151,7 +151,7 @@ const ui = {
       steps: [
         ['01', 'Знакомимся', 'Вы рассказываете о ребёнке, его питомце, семье и важных мелочах.'],
         ['02', 'Придумываем мир', 'Согласовываем жанр, сюжетную завязку и визуальное настроение.'],
-        ['03', 'Создаём героев', 'По реальным фотографиям или вашему описанию создаём образы главных героев.'],
+        ['03', 'Создаём героев', 'По реальным фотографиям или вашему описанию создаём мультяшные образы главных героев.'],
         ['04', 'Создаём книгу', 'Пишем историю, создаём иллюстрации и собираем их в цельное издание.'],
         ['05', 'Дарим чудо', 'Вы получаете готовую цифровую книгу; варианты печати обсуждаются отдельно.'],
       ],
@@ -261,7 +261,7 @@ const ui = {
       steps: [
         ['01', 'We meet', 'You tell us about the child, their pet, family, interests, and the details that make them unique.'],
         ['02', 'We invent the world', 'Together we agree on the genre, the story premise, and the visual mood.'],
-        ['03', 'We create the characters', 'Using real photographs or your description, we develop the main characters’ appearance.'],
+        ['03', 'We create the characters', 'Using real photographs or your description, we create cartoon-style versions of the main characters.'],
         ['04', 'We create the book', 'We write the story, develop the illustrations, and compose them into a complete edition.'],
         ['05', 'You give wonder', 'You receive the finished digital book; print options can be discussed separately.'],
       ],

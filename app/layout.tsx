@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Красочные авторские сказки и книги по персональному заказу.',
   keywords: ['детские книги', 'авторские сказки', 'персональная книга', 'Igor Herzog', "children's books"],
   authors: [{ name: 'Игорь ГЕРЦОГ' }],
-  icons: { icon: '/favicon.png' },
+  icons: { icon: `${siteUrl}/favicon.png`, apple: `${siteUrl}/favicon.png` },
   alternates: { canonical: siteUrl },
   openGraph: {
     type: 'website',

@@ -49,12 +49,12 @@ h2 { margin: 20px 0 0; font: 700 clamp(38px, 4.4vw, 68px)/1.01 Georgia, "Times N
 .fragmentTwo { right: -7vw; bottom: -4vh; animation: fragmentFade 18s 6s ease-in-out infinite; opacity: 0; }
 .fragmentThree { right: 22vw; top: -12vh; animation: fragmentFade 18s 12s ease-in-out infinite; opacity: 0; }
 
-.siteHeader { height: 92px; width: min(1440px, 100%); margin: auto; padding: 0 5vw; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 20; border-bottom: 1px solid rgba(255,255,255,.12); }
-.brand { display: inline-flex; align-items: center; gap: 12px; flex-shrink: 0; }
-.brandMark { width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.44); border-radius: 50%; font: italic 700 24px Georgia, serif; color: var(--gold); box-shadow: inset 0 0 0 4px rgba(255,255,255,.05); }
-.brandMark img { width: 100%; height: 100%; border: 3px solid rgba(8,31,70,.9); border-radius: inherit; object-fit: cover; object-position: center; }
-.brand b { display: block; font-size: 14px; letter-spacing: .13em; }
-.brand small { display: block; margin-top: 3px; color: #8fcfff; letter-spacing: .22em; font-size: 8px; }
+.siteHeader { height: 128px; width: min(1440px, 100%); margin: auto; padding: 0 5vw; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 20; border-bottom: 1px solid rgba(255,255,255,.12); }
+.brand { display: inline-flex; align-items: center; gap: 18px; flex-shrink: 0; }
+.brandMark { width: 82px; height: 82px; position: relative; flex: 0 0 82px; border: 2px solid rgba(255,255,255,.48); border-radius: 50%; background: radial-gradient(circle at 50% 45%, #224f87, #091d42 72%); box-shadow: inset 0 0 0 5px rgba(255,255,255,.05), 0 10px 28px rgba(0,0,0,.28); }
+.brandMark img { position: absolute; left: 50%; bottom: -8%; width: 126%; height: 126%; max-width: none; transform: translateX(-50%); object-fit: contain; filter: drop-shadow(0 6px 7px rgba(0,0,0,.32)); }
+.brand b { display: block; font-size: 22px; letter-spacing: .1em; }
+.brand small { display: block; margin-top: 5px; color: #8fcfff; letter-spacing: .18em; font-size: 10px; }
 .siteHeader nav { display: flex; gap: clamp(18px, 2.7vw, 48px); align-items: center; font-size: 12px; color: #dcecff; }
 .siteHeader nav a { position: relative; transition: color .2s ease; }
 .siteHeader nav a:hover { color: var(--gold); }
@@ -66,7 +66,7 @@ h2 { margin: 20px 0 0; font: 700 clamp(38px, 4.4vw, 68px)/1.01 Georgia, "Times N
 .menuButton { display: none; width: 42px; height: 42px; padding: 0; border: 1px solid rgba(255,255,255,.25); border-radius: 50%; background: rgba(255,255,255,.06); cursor: pointer; }
 .menuButton span { display: block; width: 17px; height: 1px; margin: 5px auto; background: white; }
 
-.heroGrid { width: min(1440px, 100%); min-height: calc(100vh - 92px); margin: auto; padding: 3.5vh 5vw 8vh; display: grid; grid-template-columns: minmax(420px, .9fr) minmax(460px, 1.1fr); align-items: center; gap: 2vw; }
+.heroGrid { width: min(1440px, 100%); min-height: calc(100vh - 128px); margin: auto; padding: 3.5vh 5vw 8vh; display: grid; grid-template-columns: minmax(420px, .9fr) minmax(460px, 1.1fr); align-items: center; gap: 2vw; }
 .heroCopy { position: relative; z-index: 3; padding-bottom: 3vh; }
 .eyebrow { display: flex; align-items: center; gap: 11px; text-transform: uppercase; color: #acd8ff; letter-spacing: .2em; font-size: 10px; font-weight: 700; }
 .eyebrow span { width: 31px; height: 2px; background: var(--gold); }
@@ -292,7 +292,7 @@ footer { color: white; background: #06152f; }
 }
 
 @media (max-width: 960px) {
-  .siteHeader nav { position: absolute; top: 80px; left: 20px; right: 20px; padding: 22px; display: none; flex-direction: column; align-items: stretch; gap: 0; border: 1px solid rgba(255,255,255,.18); border-radius: 18px; background: rgba(7,27,63,.95); backdrop-filter: blur(20px); box-shadow: 0 30px 60px rgba(0,0,0,.3); }
+  .siteHeader nav { position: absolute; top: calc(100% + 8px); left: 20px; right: 20px; padding: 22px; display: none; flex-direction: column; align-items: stretch; gap: 0; border: 1px solid rgba(255,255,255,.18); border-radius: 18px; background: rgba(7,27,63,.95); backdrop-filter: blur(20px); box-shadow: 0 30px 60px rgba(0,0,0,.3); }
   .siteHeader nav.open { display: flex; }
   .siteHeader nav a { padding: 13px 8px; border-bottom: 1px solid rgba(255,255,255,.08); }
   .siteHeader nav a:last-child { border-bottom: 0; }
@@ -330,7 +330,10 @@ footer { color: white; background: #06152f; }
 @media (max-width: 680px) {
   .sectionWrap { width: calc(100% - 40px); }
   h2 { font-size: 40px; }
-  .siteHeader { height: 76px; padding: 0 20px; }
+  .siteHeader { height: 94px; padding: 0 20px; }
+  .brand { gap: 11px; }
+  .brandMark { width: 58px; height: 58px; flex-basis: 58px; }
+  .brand b { font-size: 15px; }
   .brand small { display: none; }
   .heroGrid { padding: 48px 20px 70px; min-height: auto; }
   h1 { font-size: 47px; }

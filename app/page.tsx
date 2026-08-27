@@ -169,6 +169,7 @@ const ui = {
       quote: '«Хорошая детская книга не обещает готовых ответов, но даёт ребёнку смелость задать вопрос и сделать первый шаг».',
       role: 'Писатель · Создатель визуальных миров',
       link: 'Все книги на ЛитРес',
+      amazonLink: 'Все книги на Amazon',
     },
     contact: {
       eyebrow: 'Начнём с одной идеи',
@@ -279,6 +280,7 @@ const ui = {
       quote: '“A good children’s book does not promise ready-made answers, but gives a child the courage to ask a question and take the first step.”',
       role: 'Writer · Creator of visual worlds',
       link: 'All books on LitRes',
+      amazonLink: 'All books on Amazon',
     },
     contact: {
       eyebrow: 'It starts with one idea',
@@ -558,7 +560,10 @@ export default function Home() {
               <span>{t.author.quote}</span>
               <img className="authorSignature" src={asset('/author/igor-signature.webp')} alt={lang === 'ru' ? 'Подпись Игоря Герцога' : 'Igor Herzog’s signature'} />
             </blockquote>
-            <a className="textLink" href="https://www.litres.ru/author/igor-gercog/" target="_blank" rel="noreferrer">{t.author.link}<i>↗</i></a>
+            <div className="authorBookLinks">
+              <a className="textLink" href="https://www.litres.ru/author/igor-gercog/" target="_blank" rel="noreferrer">{t.author.link}<i>↗</i></a>
+              <a className="textLink" href="https://www.amazon.com/s?k=igor+herzog&rh=n%3A133140011%2Cn%3A154606011%2Cp_n_feature_twenty-five_browse-bin%3A3291437011&dc&ds=v1%3Ae7cYttdmBCKunjRyvgPqOrNvvVVnPmeN%2BR7zqw0u7ac&crid=LKT6ANCFR0ON&qid=1787829465&rnid=2941120011&sprefix=%2Caps%2C315&ref=sr_nr_n_6" target="_blank" rel="noreferrer">{t.author.amazonLink}<i>↗</i></a>
+            </div>
           </div>
         </div>
       </section>

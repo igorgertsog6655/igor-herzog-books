@@ -163,7 +163,7 @@ h1 span:last-child { color: var(--gold); font-style: italic; font-weight: 500; }
 .youtubeLogo i { width: 0; height: 0; margin-left: 5px; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 16px solid white; }
 .youtubeCopy p { margin: 0 0 24px; color: #53667b; font-size: 15px; line-height: 1.75; }
 .youtubeButton { color: white; background: #ff0033; box-shadow: 0 14px 32px rgba(255,0,51,.2); }
-.youtubeBanner { height: clamp(260px, 29vw, 430px); margin-top: 54px; overflow: hidden; display: block; border-radius: 26px; background: var(--blue); box-shadow: 0 30px 70px rgba(17,38,68,.18); }
+.youtubeBanner { height: clamp(120px, 13.9vw, 190px); margin-top: 54px; overflow: hidden; display: block; border-radius: 26px; background: var(--blue); box-shadow: 0 30px 70px rgba(17,38,68,.18); }
 .youtubeBanner img { width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: center; transition: transform .45s ease; }
 .youtubeBanner:hover img { transform: scale(1.025); }
 
@@ -371,7 +371,7 @@ footer { color: white; background: #06152f; }
   .youtubeSection { padding: 88px 0; }
   .youtubeHeading { gap: 15px; }
   .youtubeLogo { width: 56px; height: 40px; flex-basis: 56px; border-radius: 11px; }
-  .youtubeBanner { height: 235px; margin-top: 38px; border-radius: 18px; }
+  .youtubeBanner { height: 120px; margin-top: 38px; border-radius: 18px; }
   .personal { padding: 92px 0 85px; }
   .personalVisual { min-height: 520px; transform: none; }
   .personalHalo { width: 330px; height: 330px; }

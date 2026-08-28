@@ -154,6 +154,19 @@ h1 span:last-child { color: var(--gold); font-style: italic; font-weight: 500; }
 .filmTrack figcaption { position: absolute; z-index: 3; left: 20px; right: 20px; bottom: 24px; display: flex; align-items: center; gap: 10px; color: white; font-size: 9px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; text-shadow: 0 2px 8px #000; }
 .filmTrack figcaption span { color: var(--gold); font: italic 700 25px Georgia, serif; }
 
+/* YouTube */
+.youtubeSection { padding: 120px 0; }
+.youtubeIntro { display: grid; grid-template-columns: 1.15fr .85fr; gap: 8vw; align-items: end; }
+.youtubeHeading { display: flex; align-items: flex-start; gap: 24px; }
+.youtubeHeading h2 { margin-top: 14px; }
+.youtubeLogo { width: 68px; height: 48px; margin-top: 3px; flex: 0 0 68px; position: relative; display: grid; place-items: center; border-radius: 14px; background: #ff0033; box-shadow: 0 14px 30px rgba(255,0,51,.22); }
+.youtubeLogo i { width: 0; height: 0; margin-left: 5px; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 16px solid white; }
+.youtubeCopy p { margin: 0 0 24px; color: #53667b; font-size: 15px; line-height: 1.75; }
+.youtubeButton { color: white; background: #ff0033; box-shadow: 0 14px 32px rgba(255,0,51,.2); }
+.youtubeBanner { height: clamp(260px, 29vw, 430px); margin-top: 54px; overflow: hidden; display: block; border-radius: 26px; background: var(--blue); box-shadow: 0 30px 70px rgba(17,38,68,.18); }
+.youtubeBanner img { width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: center; transition: transform .45s ease; }
+.youtubeBanner:hover img { transform: scale(1.025); }
+
 /* Personal book */
 .personal { padding: 140px 0 125px; position: relative; overflow: hidden; }
 .personal::before { content: ''; position: absolute; right: -12vw; top: -12vw; width: 44vw; height: 44vw; border-radius: 50%; background: radial-gradient(circle, rgba(255,189,58,.52), transparent 68%); }
@@ -305,7 +318,7 @@ footer { color: white; background: #06152f; }
   .bookStage { height: 590px; min-height: 590px; }
   .scrollCue { display: none; }
   .motionFragments { opacity: .12; }
-  .sectionIntro, .motionHeader { grid-template-columns: 1fr; gap: 28px; }
+  .sectionIntro, .motionHeader, .youtubeIntro { grid-template-columns: 1fr; gap: 28px; }
   .sectionIntro > p { max-width: 680px; }
   .bookGrid { grid-template-columns: 1fr; }
   .bookCard { display: grid; grid-template-columns: .85fr 1.15fr; }
@@ -355,6 +368,10 @@ footer { color: white; background: #06152f; }
   .motionSection { padding: 90px 0 80px; }
   .filmRail { margin-top: 45px; }
   .filmTrack figure { width: 84vw; }
+  .youtubeSection { padding: 88px 0; }
+  .youtubeHeading { gap: 15px; }
+  .youtubeLogo { width: 56px; height: 40px; flex-basis: 56px; border-radius: 11px; }
+  .youtubeBanner { height: 235px; margin-top: 38px; border-radius: 18px; }
   .personal { padding: 92px 0 85px; }
   .personalVisual { min-height: 520px; transform: none; }
   .personalHalo { width: 330px; height: 330px; }

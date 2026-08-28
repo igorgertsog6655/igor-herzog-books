@@ -139,6 +139,12 @@ const ui = {
       badge2: 'Миры для мультсериалов',
       state: 'В разработке',
     },
+    youtube: {
+      eyebrow: 'Фантастические миры в эфире',
+      title: 'Приглашаем посетить наш канал на YouTube',
+      text: 'Трейлеры книг, анимационные истории, встречи с героями и новые фантастические миры Игоря ГЕРЦОГА.',
+      cta: 'Перейти на канал',
+    },
     personal: {
       eyebrow: 'Персональная история',
       title: 'Ваша собственная уникальная книга, где главные герои - Ваши дети или друзья',
@@ -148,8 +154,8 @@ const ui = {
         ['01', 'Знакомимся', 'Вы рассказываете о ребёнке, его питомце, семье и важных мелочах.'],
         ['02', 'Придумываем мир', 'Согласовываем жанр, сюжетную завязку и визуальное настроение.'],
         ['03', 'Создаём героев', 'По реальным фотографиям или вашему описанию создаём мультяшные образы главных героев.'],
-        ['04', 'Создаём книгу', 'Пишем историю, создаём иллюстрации и собираем их в цельное издание.'],
-        ['05', 'Дарим чудо', 'Вы получаете готовую цифровую книгу; варианты печати обсуждаются отдельно.'],
+        ['04', 'Создаём книгу', 'Пишем историю, создаём иллюстрации и верстаем страницы для электронной книги или сразу в формате, подготовленном для бумажной печати — по вашему запросу.'],
+        ['05', 'Дарим чудо', 'Вы получаете готовую электронную книгу или макет, полностью подготовленный для печати.'],
       ],
       cta: 'Обсудить вашу историю',
       note: 'Срок, объём и стоимость определяются после короткого обсуждения замысла.',
@@ -245,6 +251,12 @@ const ui = {
       badge2: 'Worlds for future series',
       state: 'In development',
     },
+    youtube: {
+      eyebrow: 'Fantastic worlds on screen',
+      title: 'Visit our YouTube channel',
+      text: 'Book trailers, animated stories, encounters with beloved characters, and new fantastic worlds by Igor Herzog.',
+      cta: 'Visit the channel',
+    },
     personal: {
       eyebrow: 'A personal story',
       title: 'Your own unique book, starring your children or friends',
@@ -254,8 +266,8 @@ const ui = {
         ['01', 'We meet', 'You tell us about the child, their pet, family, interests, and the details that make them unique.'],
         ['02', 'We invent the world', 'Together we agree on the genre, the story premise, and the visual mood.'],
         ['03', 'We create the characters', 'Using real photographs or your description, we create cartoon-style versions of the main characters.'],
-        ['04', 'We create the book', 'We write the story, develop the illustrations, and compose them into a complete edition.'],
-        ['05', 'You give wonder', 'You receive the finished digital book; print options can be discussed separately.'],
+        ['04', 'We create the book', 'We write the story, create the illustrations, and lay out the pages for an e-book or in a print-ready format for a paper edition—whichever you request.'],
+        ['05', 'You give wonder', 'You receive a finished e-book or a complete print-ready layout.'],
       ],
       cta: 'Discuss your story',
       note: 'Timeline, scope, and price are set after a short conversation about the idea.',
@@ -505,6 +517,19 @@ export default function Home() {
             {[...books, ...books].map((book, index) => <figure key={`${book.id}-${index}`}><img src={asset(book.scene)} alt="" /><figcaption><span>0{(index % 3) + 1}</span>{t.motion.state}</figcaption></figure>)}
           </div>
         </div>
+      </section>
+
+      <section className="youtubeSection sectionLight">
+        <div className="sectionWrap youtubeIntro">
+          <div className="youtubeHeading">
+            <span className="youtubeLogo" aria-hidden="true"><i /></span>
+            <div><span className="sectionEyebrow">{t.youtube.eyebrow}</span><h2>{t.youtube.title}</h2></div>
+          </div>
+          <div className="youtubeCopy"><p>{t.youtube.text}</p><a className="button youtubeButton" href="https://www.youtube.com/@FantasticWorlds2026" target="_blank" rel="noreferrer">{t.youtube.cta}<i>↗</i></a></div>
+        </div>
+        <a className="sectionWrap youtubeBanner" href="https://www.youtube.com/@FantasticWorlds2026" target="_blank" rel="noreferrer" aria-label={t.youtube.cta}>
+          <img src={asset('/youtube/channel-banner.webp')} alt={lang === 'ru' ? 'Канал «Фантастические миры» на YouTube' : 'Fantastic Worlds YouTube channel'} />
+        </a>
       </section>
 
       <section className="personal sectionWarm" id="personal">

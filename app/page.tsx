@@ -4,7 +4,7 @@ import { FormEvent, useEffect, useMemo, useState } from 'react';
 
 type Lang = 'ru' | 'en';
 type FilterId = 'all' | '5-7' | '8-10' | 'family';
-type TopicId = 'personal' | 'books' | 'pdf' | 'rights' | 'other';
+type TopicId = 'personal' | 'books' | 'rights' | 'other';
 
 const assetRoot = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 const asset = (path: string) => `${assetRoot}${path}`;
@@ -123,15 +123,11 @@ const ui = {
       filters: { all: 'Все книги', '5-7': '5–7 лет', '8-10': '8–10 лет', family: 'Семейное чтение' },
       details: 'Открыть книгу',
       pages: 'страниц',
-      directTitle: 'Хотите PDF напрямую от автора?',
-      directText: 'Напишите нам — поможем с выбором формата. Моментальная оплата на сайте появится следующим этапом.',
-      directCta: 'Запросить PDF',
     },
     modal: {
       buy: 'Где купить',
       litres: 'Купить на ЛитРес',
       amazon: 'Buy on Amazon',
-      direct: 'Запросить PDF у автора',
       close: 'Закрыть',
       note: 'Вы перейдёте на официальную страницу издания.',
     },
@@ -174,7 +170,7 @@ const ui = {
     contact: {
       eyebrow: 'Начнём с одной идеи',
       title: 'Расскажите, какой мир вы хотите подарить',
-      text: 'Напишите автору о персональной книге, правах на экранизацию, покупке PDF или просто поделитесь впечатлениями.',
+      text: 'Напишите автору о персональной книге, правах на экранизацию или просто поделитесь впечатлениями.',
       privateLabel: 'Связь с автором',
       privateCta: 'Напишите через форму',
       response: 'Обычно отвечаем в течение 1–2 рабочих дней.',
@@ -184,7 +180,6 @@ const ui = {
       topics: {
         personal: 'Персональная книга',
         books: 'Вопрос о книгах',
-        pdf: 'Покупка PDF',
         rights: 'Анимация и права',
         other: 'Другое',
       },
@@ -234,15 +229,11 @@ const ui = {
       filters: { all: 'All books', '5-7': 'Ages 5–7', '8-10': 'Ages 8–10', family: 'Family reading' },
       details: 'Open the book',
       pages: 'pages',
-      directTitle: 'Would you like a PDF directly from the author?',
-      directText: 'Write to us and we will help with the right format. Instant checkout on this site is planned for the next stage.',
-      directCta: 'Request a PDF',
     },
     modal: {
       buy: 'Where to buy',
       litres: 'Buy the Russian edition on LitRes',
       amazon: 'Buy the English edition on Amazon',
-      direct: 'Request a PDF from the author',
       close: 'Close',
       note: 'You will continue to the official edition page.',
     },
@@ -285,7 +276,7 @@ const ui = {
     contact: {
       eyebrow: 'It starts with one idea',
       title: 'Tell us what kind of world you want to give',
-      text: 'Write about a personal book, screen rights, a direct PDF purchase, or simply share what the stories made you feel.',
+      text: 'Write about a personal book, screen rights, or simply share what the stories made you feel.',
       privateLabel: 'Contact the author',
       privateCta: 'Write using the form',
       response: 'We usually reply within 1–2 business days.',
@@ -295,7 +286,6 @@ const ui = {
       topics: {
         personal: 'A personal book',
         books: 'Question about the books',
-        pdf: 'Direct PDF purchase',
         rights: 'Animation and rights',
         other: 'Other',
       },
@@ -502,11 +492,6 @@ export default function Home() {
               );
             })}
           </div>
-          <div className="directPdf">
-            <div className="pdfIcon"><span>PDF</span></div>
-            <div><h3>{t.catalog.directTitle}</h3><p>{t.catalog.directText}</p></div>
-            <button className="button buttonInk" onClick={() => openContact('pdf')}>{t.catalog.directCta}<i>→</i></button>
-          </div>
         </div>
       </section>
 
@@ -624,7 +609,6 @@ export default function Home() {
                 <a className="store storeLitres" href={selectedBook.links.litres} target="_blank" rel="noreferrer"><b>Л</b><span>{t.modal.litres}<small>{t.modal.note}</small></span><i>↗</i></a>
                 <a className="store storeAmazon" href={selectedBook.links.amazon} target="_blank" rel="noreferrer"><b>a</b><span>{t.modal.amazon}<small>{t.modal.note}</small></span><i>↗</i></a>
               </div>
-              <button className="textLink modalDirect" onClick={() => openContact('pdf')}>{t.modal.direct}<i>→</i></button>
             </div>
           </section>
         </div>

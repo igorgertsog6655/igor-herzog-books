@@ -138,6 +138,10 @@ const ui = {
       badge1: 'Анимационные тизеры',
       badge2: 'Миры для мультсериалов',
       state: 'В разработке',
+      videoEyebrow: 'Книжный трейлер',
+      videoTitle: '«Тайна карманной луны» оживает',
+      videoText: 'Посмотрите рекламный ролик о загадочном путешествии, где свет карманной луны открывает дорогу в мир невозможных тайн.',
+      videoCta: 'Узнать о книге',
     },
     youtube: {
       eyebrow: 'Фантастические миры в эфире',
@@ -250,6 +254,10 @@ const ui = {
       badge1: 'Animated teasers',
       badge2: 'Worlds for future series',
       state: 'In development',
+      videoEyebrow: 'Book trailer',
+      videoTitle: 'The Mystery of the Pocket Moon comes alive',
+      videoText: 'Watch the trailer for a mysterious journey where the glow of a pocket moon opens the way into a world of impossible secrets.',
+      videoCta: 'Discover the book',
     },
     youtube: {
       eyebrow: 'Fantastic worlds on screen',
@@ -511,6 +519,19 @@ export default function Home() {
         <div className="sectionWrap motionHeader">
           <div><span className="sectionEyebrow sectionEyebrowLight">{t.motion.eyebrow}</span><h2>{t.motion.title}</h2></div>
           <div className="motionCopy"><p>{t.motion.text}</p><div className="motionBadges"><span>● {t.motion.badge1}</span><span>● {t.motion.badge2}</span></div></div>
+        </div>
+        <div className="sectionWrap featuredTrailer">
+          <div className="trailerFrame">
+            <video controls preload="metadata" playsInline poster={asset('/videos/pocket-moon-poster.webp')} aria-label={t.motion.videoTitle}>
+              <source src={asset('/videos/pocket-moon-trailer.mp4')} type="video/mp4" />
+            </video>
+          </div>
+          <div className="trailerCopy">
+            <span className="sectionEyebrow sectionEyebrowLight">{t.motion.videoEyebrow}</span>
+            <h3>{t.motion.videoTitle}</h3>
+            <p>{t.motion.videoText}</p>
+            <button className="button buttonPrimary" onClick={() => setSelectedId('pocket-moon')}>{t.motion.videoCta}<i>→</i></button>
+          </div>
         </div>
         <div className="filmRail" aria-hidden="true">
           <div className="filmTrack">

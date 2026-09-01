@@ -181,9 +181,10 @@ h1 span:last-child { color: var(--gold); font-style: italic; font-weight: 500; }
 .personalHalo { position: absolute; width: 480px; height: 480px; left: 44%; top: 48%; transform: translate(-50%,-50%); border: 1px solid rgba(17,38,68,.19); border-radius: 50%; box-shadow: 0 0 0 55px rgba(255,255,255,.16), 0 0 0 110px rgba(255,255,255,.08); }
 .memory { position: absolute; overflow: hidden; padding: 9px 9px 38px; background: #fffaf2; box-shadow: 0 25px 60px rgba(63,40,20,.2); }
 .memory img { width: 100%; height: 100%; object-fit: cover; }
-.memoryOne { z-index: 2; width: 320px; height: 390px; left: 18%; top: 15%; transform: rotate(-6deg); }
-.memoryTwo { z-index: 1; width: 285px; height: 355px; left: 46%; top: 25%; transform: rotate(8deg); }
-.memoryThree { z-index: 3; width: 215px; height: 250px; left: 8%; top: 53%; transform: rotate(7deg); }
+.memoryOne { z-index: 2; width: 275px; height: 330px; left: 9%; top: 13%; transform: rotate(-7deg); }
+.memoryTwo { z-index: 1; width: 260px; height: 315px; left: 43%; top: 15%; transform: rotate(7deg); }
+.memoryThree { z-index: 3; width: 225px; height: 270px; left: 3%; top: 50%; transform: rotate(7deg); }
+.memoryFour { z-index: 4; width: 235px; height: 280px; left: 39%; top: 52%; transform: rotate(-5deg); }
 .personalSeal { position: absolute; z-index: 5; right: 1%; top: 3%; width: 145px; height: 145px; display: grid; place-content: center; text-align: center; border-radius: 50%; background: var(--ink); color: white; transform: rotate(8deg); box-shadow: 0 0 0 8px var(--gold), 0 18px 35px rgba(17,38,68,.25); }
 .personalSeal b { display: block; color: var(--gold); font: italic 700 38px Georgia, serif; }
 .personalSeal span { max-width: 95px; margin-top: 5px; font-size: 7px; font-weight: 850; letter-spacing: .14em; line-height: 1.4; text-transform: uppercase; }
@@ -387,9 +388,10 @@ footer { color: white; background: #06152f; }
   .personal { padding: 92px 0 85px; }
   .personalVisual { min-height: 520px; transform: none; }
   .personalHalo { width: 330px; height: 330px; }
-  .memoryOne { width: 235px; height: 300px; left: 10%; top: 15%; }
-  .memoryTwo { width: 210px; height: 270px; left: 42%; top: 26%; }
-  .memoryThree { width: 150px; height: 185px; left: 3%; top: 56%; }
+  .memoryOne { width: 205px; height: 245px; left: 5%; top: 13%; }
+  .memoryTwo { width: 190px; height: 230px; left: 46%; top: 18%; }
+  .memoryThree { width: 165px; height: 200px; left: 1%; top: 48%; }
+  .memoryFour { width: 175px; height: 210px; left: 42%; top: 51%; }
   .personalSeal { width: 105px; height: 105px; right: 1%; }
   .personalSeal b { font-size: 27px; }
   .personalSeal span { max-width: 72px; font-size: 5px; }

@@ -622,9 +622,10 @@ export default function Home() {
         <div className="sectionWrap personalGrid">
           <div className="personalVisual">
             <div className="personalHalo" />
-            <div className="memory memoryOne"><img src={asset('/scenes/moon-reflection.webp')} alt="" /></div>
-            <div className="memory memoryTwo"><img src={asset('/scenes/suitcase-letter.webp')} alt="" /></div>
-            <div className="memory memoryThree"><img src={asset('/scenes/counted-city.webp')} alt="" /></div>
+            <div className="memory memoryOne"><img src={asset('/future/future-01.webp')} alt="" /></div>
+            <div className="memory memoryTwo"><img src={asset('/future/future-02.webp')} alt="" /></div>
+            <div className="memory memoryThree"><img src={asset('/future/future-03.webp')} alt="" /></div>
+            <div className="memory memoryFour"><img src={asset('/future/future-04.webp')} alt="" /></div>
             <div className="personalSeal"><b>1/1</b><span>{t.personal.visualTag}</span></div>
             <div className="personalCaption">✦ <span>{t.personal.visualTitle}</span></div>
           </div>

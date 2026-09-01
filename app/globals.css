@@ -267,6 +267,7 @@ footer { color: white; background: #06152f; }
 .footerTop { min-height: 135px; display: flex; align-items: center; justify-content: space-between; gap: 30px; border-bottom: 1px solid rgba(255,255,255,.1); }
 .footerTop p { color: #8ca9c6; font: italic 500 18px Georgia, serif; }
 .backTop { width: 47px; height: 47px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.2); border-radius: 50%; color: var(--gold); }
+.footerDisclosure { margin: 0 auto; padding-top: 22px; color: #7895b1; font-size: 11px; line-height: 1.7; }
 .footerBottom { min-height: 74px; display: flex; justify-content: space-between; align-items: center; color: #6683a1; font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }
 
 /* Modal */

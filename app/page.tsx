@@ -262,6 +262,7 @@ const ui = {
     },
     footer: {
       line: 'Истории для детей. Вопросы — для всех.',
+      aiNote: 'Иллюстрации созданы Игорем Герцогом с использованием ChatGPT Images (OpenAI). Анимационные сцены и видеоматериалы подготовлены автором с использованием технологий искусственного интеллекта, включая Google Vids.',
       rights: 'Все права защищены.',
       privacy: 'Конфиденциальность',
     },
@@ -379,6 +380,7 @@ const ui = {
     },
     footer: {
       line: 'Stories for children. Questions for everyone.',
+      aiNote: 'Illustrations were created by Igor Herzog using ChatGPT Images (OpenAI). Animated scenes and video materials were produced by the author using AI technologies, including Google Vids.',
       rights: 'All rights reserved.',
       privacy: 'Privacy',
     },
@@ -699,6 +701,7 @@ export default function Home() {
           <p>{t.footer.line}</p>
           <a className="backTop" href="#top">↑</a>
         </div>
+        <p className="sectionWrap footerDisclosure">{t.footer.aiNote}</p>
         <div className="sectionWrap footerBottom"><span>© 2026 {lang === 'ru' ? 'Игорь ГЕРЦОГ' : 'Igor Herzog'}. {t.footer.rights}</span><a href="#contact" id="privacy">{t.footer.privacy}</a></div>
       </footer>
 

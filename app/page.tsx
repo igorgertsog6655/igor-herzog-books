@@ -94,12 +94,14 @@ const books = [
 ];
 
 const filmVideos = [
-  { src: '/filmstrip/scene-01.mp4', poster: '/filmstrip/scene-01-poster.jpg' },
-  { src: '/filmstrip/scene-02.mp4', poster: '/filmstrip/scene-02-poster.jpg' },
-  { src: '/filmstrip/scene-03.mp4', poster: '/filmstrip/scene-03-poster.jpg' },
-  { src: '/filmstrip/scene-04.mp4', poster: '/filmstrip/scene-04-poster.jpg' },
-  { src: '/filmstrip/scene-05.mp4', poster: '/filmstrip/scene-05-poster.jpg' },
-  { src: '/filmstrip/scene-06.mp4', poster: '/filmstrip/scene-06-poster.jpg' },
+  { src: '/filmstrip/scene-01.mp4', poster: '/filmstrip/scene-01-poster.jpg', book: 'pocket' },
+  { src: '/filmstrip/scene-02.mp4', poster: '/filmstrip/scene-02-poster.jpg', book: 'step' },
+  { src: '/filmstrip/scene-03.mp4', poster: '/filmstrip/scene-03-poster.jpg', book: 'pocket' },
+  { src: '/filmstrip/scene-04.mp4', poster: '/filmstrip/scene-04-poster.jpg', book: 'suitcase' },
+  { src: '/filmstrip/scene-05.mp4', poster: '/filmstrip/scene-05-poster.jpg', book: 'step' },
+  { src: '/filmstrip/scene-06.mp4', poster: '/filmstrip/scene-06-poster.jpg', book: 'pocket' },
+  { src: '/filmstrip/scene-07.mp4', poster: '/filmstrip/scene-07-poster.jpg', book: 'suitcase' },
+  { src: '/filmstrip/scene-08.mp4', poster: '/filmstrip/scene-08-poster.jpg', book: 'step' },
 ];
 
 function LazyVideo({ src, poster, label, autoPlay = false, loop = false, decorative = false }: {
@@ -194,6 +196,7 @@ const ui = {
       badge2: 'Миры для мультсериалов',
       filmTitlePocket: 'Тайна карманной луны',
       filmTitleStep: 'Секрет тринадцатой ступеньки',
+      filmTitleSuitcase: 'Шёпот из старого чемодана',
       videoEyebrow: 'Книжный трейлер',
       videoTitle: '«Тайна карманной луны» оживает',
       videoText: 'Совершите загадочное путешествие, где свет лунного сердца открывает дорогу в мир интересных тайн.',
@@ -312,6 +315,7 @@ const ui = {
       badge2: 'Worlds for future series',
       filmTitlePocket: 'The Mystery of the Pocket Moon',
       filmTitleStep: 'The Secret of the 13th Step',
+      filmTitleSuitcase: 'Whispers from the Old Suitcase',
       videoEyebrow: 'Book trailer',
       videoTitle: 'The Mystery of the Pocket Moon comes alive',
       videoText: 'Embark on a mysterious journey where the light of the Moon’s heart opens the way to a world of fascinating secrets.',
@@ -592,15 +596,22 @@ export default function Home() {
         </div>
         <div className="filmRail" aria-hidden="true">
           <div className="filmTrack">
-            {[...filmVideos, ...filmVideos].map((video, index) => (
-              <figure key={`${video.src}-${index}`}>
-                <LazyVideo src={video.src} poster={video.poster} autoPlay loop decorative />
-                <figcaption>
-                  <span>{String((index % filmVideos.length) + 1).padStart(2, '0')}</span>
-                  {(index % filmVideos.length) % 2 === 0 ? t.motion.filmTitlePocket : t.motion.filmTitleStep}
-                </figcaption>
-              </figure>
-            ))}
+            {[...filmVideos, ...filmVideos].map((video, index) => {
+              const filmTitle = video.book === 'pocket'
+                ? t.motion.filmTitlePocket
+                : video.book === 'suitcase'
+                  ? t.motion.filmTitleSuitcase
+                  : t.motion.filmTitleStep;
+              return (
+                <figure key={`${video.src}-${index}`}>
+                  <LazyVideo src={video.src} poster={video.poster} autoPlay loop decorative />
+                  <figcaption>
+                    <span>{String((index % filmVideos.length) + 1).padStart(2, '0')}</span>
+                    {filmTitle}
+                  </figcaption>
+                </figure>
+              );
+            })}
           </div>
         </div>
       </section>

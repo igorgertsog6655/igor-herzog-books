@@ -1,6 +1,6 @@
 'use client';
 
-import { FormEvent, useEffect, useMemo, useState } from 'react';
+import { FormEvent, useEffect, useMemo, useRef, useState } from 'react';
 
 type Lang = 'ru' | 'en';
 type FilterId = 'all' | '5-7' | '8-10' | 'family';
@@ -94,13 +94,59 @@ const books = [
 ];
 
 const filmVideos = [
-  '/filmstrip/scene-01.mp4',
-  '/filmstrip/scene-02.mp4',
-  '/filmstrip/scene-03.mp4',
-  '/filmstrip/scene-04.mp4',
-  '/filmstrip/scene-05.mp4',
-  '/filmstrip/scene-06.mp4',
+  { src: '/filmstrip/scene-01.mp4', poster: '/filmstrip/scene-01-poster.jpg' },
+  { src: '/filmstrip/scene-02.mp4', poster: '/filmstrip/scene-02-poster.jpg' },
+  { src: '/filmstrip/scene-03.mp4', poster: '/filmstrip/scene-03-poster.jpg' },
+  { src: '/filmstrip/scene-04.mp4', poster: '/filmstrip/scene-04-poster.jpg' },
+  { src: '/filmstrip/scene-05.mp4', poster: '/filmstrip/scene-05-poster.jpg' },
+  { src: '/filmstrip/scene-06.mp4', poster: '/filmstrip/scene-06-poster.jpg' },
 ];
+
+function LazyVideo({ src, poster, label, autoPlay = false, loop = false, decorative = false }: {
+  src: string;
+  poster: string;
+  label?: string;
+  autoPlay?: boolean;
+  loop?: boolean;
+  decorative?: boolean;
+}) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [nearViewport, setNearViewport] = useState(false);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setNearViewport(true);
+        if (autoPlay && video.readyState > 1) void video.play().catch(() => undefined);
+      } else if (autoPlay) {
+        video.pause();
+      }
+    }, { rootMargin: '400px 0px' });
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, [autoPlay]);
+
+  return (
+    <video
+      ref={videoRef}
+      controls={!decorative}
+      autoPlay={autoPlay && nearViewport}
+      muted={autoPlay}
+      loop={loop}
+      playsInline
+      preload={nearViewport ? 'metadata' : 'none'}
+      poster={asset(poster)}
+      src={nearViewport ? asset(src) : undefined}
+      tabIndex={decorative ? -1 : undefined}
+      aria-label={label}
+      aria-hidden={decorative || undefined}
+    />
+  );
+}
 
 const ui = {
   ru: {
@@ -533,9 +579,7 @@ export default function Home() {
         </div>
         <div className="sectionWrap featuredTrailer">
           <div className="trailerFrame">
-            <video controls preload="metadata" playsInline poster={asset('/videos/pocket-moon-poster.webp')} aria-label={t.motion.videoTitle}>
-              <source src={asset('/videos/pocket-moon-trailer.mp4')} type="video/mp4" />
-            </video>
+            <LazyVideo src="/videos/pocket-moon-trailer.mp4" poster="/videos/pocket-moon-poster.webp" label={t.motion.videoTitle} />
           </div>
           <div className="trailerCopy">
             <span className="sectionEyebrow sectionEyebrowLight">{t.motion.videoEyebrow}</span>
@@ -547,10 +591,8 @@ export default function Home() {
         <div className="filmRail" aria-hidden="true">
           <div className="filmTrack">
             {[...filmVideos, ...filmVideos].map((video, index) => (
-              <figure key={`${video}-${index}`}>
-                <video autoPlay muted loop playsInline preload="metadata" tabIndex={-1}>
-                  <source src={asset(video)} type="video/mp4" />
-                </video>
+              <figure key={`${video.src}-${index}`}>
+                <LazyVideo src={video.src} poster={video.poster} autoPlay loop decorative />
                 <figcaption>
                   <span>{String((index % filmVideos.length) + 1).padStart(2, '0')}</span>
                   {(index % filmVideos.length) % 2 === 0 ? t.motion.filmTitlePocket : t.motion.filmTitleStep}

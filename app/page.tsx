@@ -196,7 +196,7 @@ const ui = {
       filmTitleStep: 'Секрет тринадцатой ступеньки',
       videoEyebrow: 'Книжный трейлер',
       videoTitle: '«Тайна карманной луны» оживает',
-      videoText: 'Посмотрите рекламный ролик о загадочном путешествии, где свет карманной луны открывает дорогу в мир невозможных тайн.',
+      videoText: 'Совершите загадочное путешествие, где свет лунного сердца открывает дорогу в мир интересных тайн.',
       videoCta: 'Узнать о книге',
     },
     youtube: {
@@ -313,7 +313,7 @@ const ui = {
       filmTitleStep: 'The Secret of the 13th Step',
       videoEyebrow: 'Book trailer',
       videoTitle: 'The Mystery of the Pocket Moon comes alive',
-      videoText: 'Watch the trailer for a mysterious journey where the glow of a pocket moon opens the way into a world of impossible secrets.',
+      videoText: 'Embark on a mysterious journey where the light of the Moon’s heart opens the way to a world of fascinating secrets.',
       videoCta: 'Discover the book',
     },
     youtube: {

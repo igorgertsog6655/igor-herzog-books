@@ -146,6 +146,8 @@ const ui = {
       text: 'Мы готовим анимационные тизеры и развиваем идеи целых мультсериалов. Пока — маленький пролог: фрагменты иллюстраций уже оживают на этой странице.',
       badge1: 'Анимационные тизеры',
       badge2: 'Миры для мультсериалов',
+      filmTitlePocket: 'Тайна карманной луны',
+      filmTitleStep: 'Секрет тринадцатой ступеньки',
       videoEyebrow: 'Книжный трейлер',
       videoTitle: '«Тайна карманной луны» оживает',
       videoText: 'Посмотрите рекламный ролик о загадочном путешествии, где свет карманной луны открывает дорогу в мир невозможных тайн.',
@@ -261,6 +263,8 @@ const ui = {
       text: 'Animated teasers are in development, along with ideas for full series. For now, this is a small prologue: fragments from the books are already coming alive across this page.',
       badge1: 'Animated teasers',
       badge2: 'Worlds for future series',
+      filmTitlePocket: 'The Mystery of the Pocket Moon',
+      filmTitleStep: 'The Secret of the 13th Step',
       videoEyebrow: 'Book trailer',
       videoTitle: 'The Mystery of the Pocket Moon comes alive',
       videoText: 'Watch the trailer for a mysterious journey where the glow of a pocket moon opens the way into a world of impossible secrets.',
@@ -547,7 +551,10 @@ export default function Home() {
                 <video autoPlay muted loop playsInline preload="metadata" tabIndex={-1}>
                   <source src={asset(video)} type="video/mp4" />
                 </video>
-                <figcaption><span>{String((index % filmVideos.length) + 1).padStart(2, '0')}</span></figcaption>
+                <figcaption>
+                  <span>{String((index % filmVideos.length) + 1).padStart(2, '0')}</span>
+                  {(index % filmVideos.length) % 2 === 0 ? t.motion.filmTitlePocket : t.motion.filmTitleStep}
+                </figcaption>
               </figure>
             ))}
           </div>

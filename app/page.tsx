@@ -93,6 +93,15 @@ const books = [
   },
 ];
 
+const filmVideos = [
+  '/filmstrip/scene-01.mp4',
+  '/filmstrip/scene-02.mp4',
+  '/filmstrip/scene-03.mp4',
+  '/filmstrip/scene-04.mp4',
+  '/filmstrip/scene-05.mp4',
+  '/filmstrip/scene-06.mp4',
+];
+
 const ui = {
   ru: {
     nav: [
@@ -137,7 +146,7 @@ const ui = {
       text: 'Мы готовим анимационные тизеры и развиваем идеи целых мультсериалов. Пока — маленький пролог: фрагменты иллюстраций уже оживают на этой странице.',
       badge1: 'Анимационные тизеры',
       badge2: 'Миры для мультсериалов',
-      state: 'В разработке',
+      state: 'Ожившая сцена',
       videoEyebrow: 'Книжный трейлер',
       videoTitle: '«Тайна карманной луны» оживает',
       videoText: 'Посмотрите рекламный ролик о загадочном путешествии, где свет карманной луны открывает дорогу в мир невозможных тайн.',
@@ -253,7 +262,7 @@ const ui = {
       text: 'Animated teasers are in development, along with ideas for full series. For now, this is a small prologue: fragments from the books are already coming alive across this page.',
       badge1: 'Animated teasers',
       badge2: 'Worlds for future series',
-      state: 'In development',
+      state: 'Animated scene',
       videoEyebrow: 'Book trailer',
       videoTitle: 'The Mystery of the Pocket Moon comes alive',
       videoText: 'Watch the trailer for a mysterious journey where the glow of a pocket moon opens the way into a world of impossible secrets.',
@@ -535,7 +544,14 @@ export default function Home() {
         </div>
         <div className="filmRail" aria-hidden="true">
           <div className="filmTrack">
-            {[...books, ...books].map((book, index) => <figure key={`${book.id}-${index}`}><img src={asset(book.scene)} alt="" /><figcaption><span>0{(index % 3) + 1}</span>{t.motion.state}</figcaption></figure>)}
+            {[...filmVideos, ...filmVideos].map((video, index) => (
+              <figure key={`${video}-${index}`}>
+                <video autoPlay muted loop playsInline preload="metadata" tabIndex={-1}>
+                  <source src={asset(video)} type="video/mp4" />
+                </video>
+                <figcaption><span>{String((index % filmVideos.length) + 1).padStart(2, '0')}</span>{t.motion.state}</figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import './globals.css';
 
 const siteUrl = 'https://igorgertsog6655.github.io/igor-herzog-books';
@@ -31,5 +32,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="ru"><body>{children}</body></html>;
+  return <html lang="ru"><body>{children}<Script src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/analytics.js`} strategy="afterInteractive" /></body></html>;
 }

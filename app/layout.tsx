@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import './globals.css';
 
 const siteUrl = 'https://igorgertsog6655.github.io/igor-herzog-books';
@@ -31,5 +32,15 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="ru"><body>{children}</body></html>;
+  return (
+    <html lang="ru">
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: 'window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)};window.plausible.init=window.plausible.init||function(i){window.plausible.o=i||{}};window.plausible.init();' }} />
+      </head>
+      <body>
+        {children}
+        <Script src="https://plausible.io/js/pa-KFjADJ4JCi9FstoqcfAs1.js" strategy="afterInteractive" />
+      </body>
+    </html>
+  );
 }

@@ -423,13 +423,3 @@ footer { color: white; background: #06152f; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
-
-.analyticsConsent { position: fixed; bottom: 20px; left: 20px; z-index: 10000; width: min(460px, calc(100vw - 40px)); max-height: 80dvh; overflow: auto; padding: 22px; background: #102a4c; color: #fff; border: 1px solid #7290b0; border-radius: 16px; box-shadow: 0 10px 40px #0006; font: 16px/1.5 system-ui, sans-serif; }
-.analyticsConsent[hidden], .analyticsSettings[hidden] { display: none; }
-.analyticsConsent p { margin: 0 0 12px; }
-.analyticsConsent a { color: #ffe09a; text-decoration: underline; font-size: 14px; }
-.analyticsConsent > div { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
-.analyticsConsent button, .analyticsSettings { padding: 10px 14px; border: 1px solid #a7bfd8; border-radius: 8px; background: #102a4c; color: white; cursor: pointer; font: 14px/1.4 system-ui, sans-serif; }
-.analyticsConsent button { flex: 1; min-width: 150px; }
-.analyticsConsent button:focus-visible, .analyticsSettings:focus-visible { outline: 3px solid #ffbd36; outline-offset: 3px; }
-.analyticsSettings { position: fixed; bottom: 8px; left: 8px; z-index: 9999; }
